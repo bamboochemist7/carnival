@@ -1,4 +1,4 @@
-package com.mangalore.carnival.SplashActivity;
+package com.mangalore.carnival.ui.SplashActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.os.Handler;
 
 import com.mangalore.carnival.ui.HomeActivity;
 import com.mangalore.carnival.R;
+import com.mangalore.carnival.ui.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
             }
         },1000);
     }

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Mangalore Carnival</string>
+    <string name="loading">Loading</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -20,7 +21,6 @@
     <string name="menu_stalls">Stalls</string>
     <string name="menu_partners">Partners</string>
     <string name="menu_about_us">About us</string>
-
 
 
 </resources>
