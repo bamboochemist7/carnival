@@ -13,4 +13,14 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <string name="menu_events">Today Events</string>
+    <string name="menu_lucky">Lucky Draw</string>
+    <string name="menu_all_events">Events</string>
+    <string name="menu_stalls">Stalls</string>
+    <string name="menu_partners">Partners</string>
+    <string name="menu_about_us">About us</string>
+
+
+
 </resources>
