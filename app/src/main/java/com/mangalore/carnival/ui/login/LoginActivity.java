@@ -1,17 +1,19 @@
 package com.mangalore.carnival.ui.login;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,13 +23,29 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.mangalore.carnival.R;
+import com.mangalore.carnival.data.Constants;
+import com.mangalore.carnival.data.PreferenceManager;
 import com.mangalore.carnival.ui.BaseActivity;
+import com.squareup.picasso.Picasso;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LoginActivity extends BaseActivity {
 
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
+
+    @BindView(R.id.user_img)
+    ImageView userImg;
+
+    @BindView(R.id.signInButton)
+    SignInButton signInButton;
+
+    @BindView(R.id.user_name)
+    AppCompatTextView userName;
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
@@ -37,6 +55,9 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -54,6 +75,7 @@ public class LoginActivity extends BaseActivity {
             }
         });
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -154,6 +176,18 @@ public class LoginActivity extends BaseActivity {
     private void updateUI(FirebaseUser user) {
         hideProgressDialog();
         if (user != null) {
+
+            PreferenceManager.put(this, Constants.Companion.getUSER_ID(), user.getUid());
+            PreferenceManager.put(this, Constants.Companion.getUSER_MAIL(), user.getEmail());
+            PreferenceManager.put(this, Constants.Companion.getUSER_IMG(), user.getPhotoUrl().toString());
+
+//            Log.e("RES_URL",user.getPhotoUrl().toString());
+            if (user.getPhotoUrl() != null)
+                Picasso.get().load(user.getPhotoUrl()).into(userImg);
+            userName.setText(user.getDisplayName());
+
+            signInButton.setVisibility(View.GONE);
+
 //            mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
 //            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 //
