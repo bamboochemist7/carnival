@@ -2,6 +2,7 @@ package com.mangalore.carnival.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ import com.mangalore.carnival.R;
 import com.mangalore.carnival.data.Constants;
 import com.mangalore.carnival.data.PreferenceManager;
 import com.mangalore.carnival.ui.BaseActivity;
+import com.mangalore.carnival.ui.SplashActivity.SplashActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -187,6 +189,15 @@ public class LoginActivity extends BaseActivity {
             userName.setText(user.getDisplayName());
 
             signInButton.setVisibility(View.GONE);
+
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(LoginActivity.this, SplashActivity.class));
+                    finish();
+                }
+            },2000);
 
 //            mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
 //            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));

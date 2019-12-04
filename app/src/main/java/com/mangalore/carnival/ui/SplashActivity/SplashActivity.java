@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.mangalore.carnival.ui.BaseActivity;
 import com.mangalore.carnival.ui.HomeActivity;
 import com.mangalore.carnival.R;
 import com.mangalore.carnival.ui.login.LoginActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +19,5 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-            }
-        },1000);
     }
 }
