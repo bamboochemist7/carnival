@@ -15,6 +15,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "356117931127-20icdvupc0kuqvm2vtbjr3amcbgn223b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mangalore.carnival",
+            "certificate_hash": "57fe3ef9ece5e78d9ad976b309f51e1c4f55a168"
+          }
+        },
+        {
+          "client_id": "356117931127-go2a2vvenc65i175h1juam9hfttq576m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mangalore.carnival",
+            "certificate_hash": "4f7751e9132ed51f677cd9cee7c075994112a0c3"
+          }
+        },
+        {
+          "client_id": "356117931127-74od6oascamfe6rqhekom50jkash5meu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mangalore.carnival",
+            "certificate_hash": "9cb50826092b520d586cac40c771562fda0177e0"
+          }
+        },
+        {
           "client_id": "356117931127-p0ql427d5u6uvtd2maibpoqppohd79ef.apps.googleusercontent.com",
           "client_type": 3
         }
