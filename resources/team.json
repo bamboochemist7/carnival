@@ -1,0 +1,68 @@
+{
+    "tech": [
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/15.png",
+            "name" :"Guillermo Raffaele"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/1.png",
+            "name" :"Bonnie Riley"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/2.png",
+            "name" :"Lilja Peltola"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/3.png",
+            "name" :"Christopher Gibson"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/4.png",
+            "name" :"Will Feldman"
+        }
+    ],
+    "camp": [
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/5.png",
+            "name" :"Jamie Alexa"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/6.png",
+            "name" :"Leah Stevens"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/7.png",
+            "name" :"Ferdinand Karl"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/8.png",
+            "name" :"Kelton Padgett"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/9.png",
+            "name" :"Kaya Pryor"
+        }
+    ],
+    "logi": [
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/10.png",
+            "name" :"Jordi Moyer"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/11.png",
+            "name" :"Jeshua Stout"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/12.png",
+            "name" :"Rene Wells"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/13.png",
+            "name" :"Phoenix Walker"
+        },
+        {
+            "avatar": "https://raw.githubusercontent.com/bapspatil/Pantheon/master/resources/images/14.png",
+            "name" :"Andi Lane"
+        }
+    ]
+}

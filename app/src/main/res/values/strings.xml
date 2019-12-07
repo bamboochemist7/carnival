@@ -15,6 +15,14 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+
+    <string name="app_designed_developed_by"><![CDATA[APP DESIGNED & DEVELOPED BY]]></string>
+    <string name="introduction">Brace yourselves....Pantheon is back! A bigger, better and brighter edition of the biennial cultural fest. Over 50 events leave you spoilt for choice. Like, share and spread the word.</string>
+    <string name="faqs">Q. Where can I register for activities?\nA. Registration will be on-spot.\n\n
+        Q. How can I get updates regarding the activities?\nA. We\'ll send you a notification about any updates regarding our activities and the event. If you miss these notifications, you can also see them in the Updates screen.\n\n
+        Q. How do I contact the event coordinators?\nA. There\'s a call button at the bottom-right corner of every event; click on that to call the coordinator.
+    </string>
+
     <string name="menu_events">Today Events</string>
     <string name="menu_lucky">Lucky Draw</string>
     <string name="menu_all_events">Events</string>

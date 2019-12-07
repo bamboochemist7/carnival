@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -27,12 +28,12 @@ import com.mangalore.carnival.R;
 import com.mangalore.carnival.data.Constants;
 import com.mangalore.carnival.data.PreferenceManager;
 import com.mangalore.carnival.ui.BaseActivity;
-import com.mangalore.carnival.ui.SplashActivity.SplashActivity;
+import com.mangalore.carnival.ui.MainActivity;
+import com.mangalore.carnival.utils.GlideApp;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LoginActivity extends BaseActivity {
 
@@ -69,6 +70,8 @@ public class LoginActivity extends BaseActivity {
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
 
         findViewById(R.id.signInButton).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,7 +188,14 @@ public class LoginActivity extends BaseActivity {
 
 //            Log.e("RES_URL",user.getPhotoUrl().toString());
             if (user.getPhotoUrl() != null)
-                Picasso.get().load(user.getPhotoUrl()).into(userImg);
+                GlideApp.with(this)
+                        .load(user.getPhotoUrl())
+                        .dontAnimate()
+                        .placeholder(R.drawable.user_placeholder)
+                        .error(R.drawable.user_placeholder)
+                        .fallback(R.drawable.user_placeholder)
+                        .into(userImg);
+
             userName.setText(user.getDisplayName());
 
             signInButton.setVisibility(View.GONE);
@@ -194,7 +204,7 @@ public class LoginActivity extends BaseActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    startActivity(new Intent(LoginActivity.this, SplashActivity.class));
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     finish();
                 }
             },2000);
